@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="S.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title> M S Sreelakshmi | Portfolio</title>
+    <meta name="description"content="Frontend Developer Portfolio of M S Sreelakshmi">
+    <meta name="keywords"content="Frontend Developer, HTML, CSS, JavaScript, React, Portfolio">
+    <meta name="author"content="M S Sreelakshmi">
+    <style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+    transition: .3s;
+    font-family: "Poppins",sans-serif;
+    cursor:pointer;
+}
+body{
+    background:linear-gradient(135deg,#000000,#111827,#1f2937);
+    background-color:#0f172a ;
+    color: white;
+    cursor: default;
+}
+body::before{
+    content:"";
+    position:fixed;
+    width:400px;
+    height:400px;
+    background:#6C63FF;
+    filter:blur(180px);
+    top:-150px;
+    left:-100px;
+    opacity:.35;
+    z-index:-1;
+}
+body::after{
+    content:"";
+    position:fixed;
+    width:350px;
+    height:350px;
+    background:#00C2FF;
+    filter:blur(180px);
+    bottom:-100px;
+    right:-100px;
+    opacity:.25;
+    z-index:-1;
+}
+header{
+    position: sticky;
+    top: 5px;
+    width: 90%;
+    margin: auto;
+    z-index: 1000;
+    border-radius: 10px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:10px 10px;
+    background:rgba(255,255,255,.08);
+    color: white;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.1);
+}
+html{
+    scroll-behavior:smooth;
+}
+nav a{
+    margin-left:25px;
+    text-decoration:none;
+    color:white;
+}
+nav a:hover{
+    padding-top: 10px;
+    color: #6C63FF;
+}
+.hero{
+    min-height:90vh;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 10%;
+    color: white;
+}
+.hero h1{
+    font-size: 55px;
+}
+.hero h2{
+    font-size: 72px;
+    font-weight: bold;
+    color: #6C63FF;
+    background: linear-gradient(90deg,#6C63FF,#00C2FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}   
+.hero p{
+    font-size: 30px;
+    margin: 10px;
+}
+.hero img{
+    width:320px;
+    height:320px;
+    object-fit:cover;
+    border-radius:50%;
+    border:5px solid #6C63FF;
+    box-shadow:0 0 40px rgba(108,99,255,.6);
+    animation:float 5s ease-in-out infinite;
+}
+@keyframes float{
+0%{
+transform:translateY(0);
+}
+50%{
+transform:translateY(-15px);
+}
+100%{
+transform:translateY(0);
+}
+}
+button{
+    padding:12px 25px;
+    margin-top:20px;
+    border:none;
+    background:#6c63ff;
+    color:white;
+    border-radius:6px;
+    cursor:pointer;
+}
+section{
+    padding:60px 8%;
+    color: white;
+    text-align: justify;
+    animation: fade .8s ease;
+}
+@keyframes fade{
+from{
+    opacity:0;
+    transform:translateY(30px);
+}
+to{
+    opacity:1;
+    transform:translateY(0);
+}
+
+}
+section h2{
+    font-size:42px;
+    margin-bottom:40px;
+    text-align:center;
+    position:relative;
+}
+section h2::after{
+    content:"";
+    width:80px;
+    height:4px;
+    background:#6C63FF;
+    display:block;
+    margin:15px auto;
+    border-radius:20px;
+}
+#about p{
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+    max-width: 700px;
+    margin-left: 20vw;
+}
+.btn{
+    display:inline-block;
+    background:#6C63FF;
+    color:white;
+    text-decoration:none;
+    padding:12px 25px;
+    margin-left: 44vw;
+    border: radius 50px;
+    transition:.3s;   
+    background:linear-gradient(135deg,#6C63FF,#00C2FF);
+    border-radius:50px;
+    box-shadow:0 0 25px rgba(108,99,255,.5);
+}
+.btn:hover{
+    background: #5848d6 ;
+    transform:translateY(-5px);
+    box-shadow:0 0 40px rgba(108,99,255,.8);
+}
+.education-container{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+    max-width:700px;
+    margin:40px auto;
+}
+.education-card{
+    display:flex;
+    gap:25px;
+    align-items:center;
+    padding:25px;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:18px;
+    transition:.3s;
+}
+.education-card:hover{
+    transform:translateY(-5px);
+    border-color:#6C63FF;
+}
+.edu-year{
+    min-width:140px;
+    text-align:center;
+    padding:15px;
+    background:linear-gradient(135deg,#6C63FF,#00C2FF);
+    border-radius:12px;
+    color:white;
+    font-weight:bold;
+}
+.edu-details h3{
+    color:#6C63FF;
+    margin-bottom:10px;
+}
+.graduate-badge{
+    display:inline-block;
+    margin-top:12px;
+    padding:6px 14px;
+    border-radius:20px;
+    background:#6C63FF;
+    color:white;
+    font-size:13px;
+}
+.skills{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:20px;
+    justify-content: center;
+}
+.skills div{
+    background:#6c63ff;
+    color:white;
+    padding:15px 25px;
+    border-radius:8px;
+    background:#1e293b;
+    border:1px solid #6C63FF;
+    border-radius:40px;
+}
+.skills div:hover{
+    background:#6C63FF;
+    transform:scale(1.1);
+}
+.project-box{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:20px;
+    justify-content: center;
+}
+.project-box1{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:20px;
+    justify-content: center; 
+}
+.card{
+    background:rgba(57, 52, 116, 0.08);
+    backdrop-filter:blur(15px);
+    backdrop-filter:blur(15px);
+    color:white;
+    box-shadow:none;
+    border-radius:18px;
+    padding:20px;
+    width:400px;
+    border-radius:10px;
+    box-shadow:0 15px 40px rgba(0,0,0,.4);
+    border:1px solid rgba(255,255,255,.08);
+}
+.card1{
+    background:rgba(57, 52, 116, 0.08);
+    backdrop-filter:blur(15px);
+    backdrop-filter:blur(15px);
+    color:white;
+    box-shadow:none;
+    border-radius:18px;
+    padding:20px;
+    width:400px;
+    border-radius:10px;
+    box-shadow:0 15px 40px rgba(0,0,0,.4);
+    border:1px solid rgba(255,255,255,.08);
+}
+.card:hover,
+.card1:hover{
+    transform:translateY(-12px);
+    border-color:#6C63FF;
+    scale: (1.03);
+}
+.card .projects-btn{
+    display:block;
+    justify-content: center;
+    background:#6C63FF;
+    color:white;
+    text-decoration:none;
+    padding:12px 25px;
+    border-radius: 8px;
+    align-items: center;
+    transition:.3s;   
+    background:linear-gradient(135deg,#6C63FF,#00C2FF);
+    box-shadow:0 0 25px rgba(108,99,255,.5);
+    margin: 20px auto 0;
+    width: fit-content;
+}
+.card .projects-btn:hover{
+    background: #5848d6 ;
+    transform:translateY(-5px);
+    box-shadow:0 0 40px rgba(108,99,255,.8);
+}
+.card1 .certificate-btn{
+    display:block;
+    justify-content: center;
+    background:#6C63FF;
+    color:white;
+    text-decoration:none;
+    padding:12px 25px;
+    border-radius: 8px;
+    align-items: center;
+    transition:.3s;   
+    background:linear-gradient(135deg,#6C63FF,#00C2FF);
+    box-shadow:0 0 25px rgba(108,99,255,.5);
+    margin: 20px auto 0;
+    width: fit-content;
+}
+.card1 .certificate-btn:hover{
+    background: #5848d6 ;
+    transform:translateY(-5px);
+    box-shadow:0 0 40px rgba(108,99,255,.8);
+}
+#topBtn{
+    position:fixed;
+    bottom:30px;
+    right:30px;
+    width:25px;
+    height:50px;
+    border-radius:50%;
+    display:none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+footer{
+    text-align:center;
+    padding:10px;
+    background:white;
+    color: black;
+    font-size: x-small;
+    font-family: 'Courier New', Courier, monospace;
+}
+.contact {
+    display: flex;
+    justify-content: center;
+    font-size:28px;
+    gap: 30px;
+    color:white;
+    margin-top: 30px;
+}
+.contact a{
+    font-size:35px;
+    padding:18px;
+    background:#0d131c;
+    border-radius:10%;
+    color: white;
+}
+.contact a:hover{
+    background:#6C63FF;
+    transform:translateY(-8px);
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h2> M S Sreelakshmi</h2>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#Certifications">Certifications</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="text">
+        <h1>Hello, I'm</h1>
+        <h2>M S Sreelakshmi</h2>
+        <p>I am a <span id="typing">Front End Developer</span></p>
+       <!--- <button>Hire Me</button> -->
+    </div>
+    <img src="Sreelakshmi.png" alt="M S Sreelakshmi">
+
+</section>
+<section id="about">
+<h2>About Me</h2>
+<br>
+<p>Hi, I'm Sreelakshmi 👋</p>
+<p>
+    Frontend developer with a Computer Science background and hands-on experience building projects with HTML, CSS, and JavaScript. I enjoy breaking down problems and turning them into clean, working interfaces. Comfortable picking up new tools quickly and collaborating with a team — currently deepening my JavaScript skills toward React and full stack development. Looking for an entry-level role where I can contribute from day one and keep growing.
+</p>
+</section>
+<div class="resume">
+<a href="https://drive.google.com/file/d/12o_64H8GRZxxOpxw5PxAG-FMjec-QEv6/view?usp=drive_link"
+ class="btn" target="_blank">Download Resume</a>
+</div>
+<section id="education">
+    <h2>Education</h2>
+    <div class="education-container">
+        <div class="education-card">
+            <div class="edu-year">
+                2020 - 2025
+            </div>
+            <div class="edu-details">
+                <h3>B.Tech in Computer Science & Engineering</h3>
+                <p>MES College of Engineering & Technology</p>
+                <p>Kerala, India</p>
+                <p>CGPA: 7.67</p>
+                <!--<span class="graduate-badge">Graduated in 2025</span> -->
+            </div>
+        </div>
+        <div class="education-card">
+            <div class="edu-year">
+                2018 - 2020
+            </div>
+            <div class="edu-details">
+                <h3>Higher Secondary (+2) - Computer Science</h3>
+                <p>Paliyam Govt. HSS</p>
+                <p>Kerala, India</p>
+                <p>Percentage: 79%</p>
+            </div>
+        </div>
+        <div class="education-card">
+            <div class="edu-year">
+                2017 - 2018
+            </div>
+            <div class="edu-details">
+                <h3>SSLC</h3>
+                <p>St. Joseph's HSS</p>
+                <p>Kerala, India</p>
+                <p>Percentage: 97%</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="skills">
+
+<h2>Skills</h2>
+
+<div class="skills">
+
+<div><i class="fa-brands fa-html5"></i> HTML5</div>
+<div><i class="fa-brands fa-css3"></i> CSS3</div>
+<div><i class="fa-brands fa-js"></i> JavaScript</div>
+<div><i class="fa-brands fa-react"></i> React</div>
+<div><i class="fa-brands fa-git"></i> Git</div>
+<div><i class="fa-brands fa-github"></i> GitHub</div>
+
+</div>
+
+</section>
+
+<section id="projects">
+
+<h2>Projects</h2>
+
+<div class="project-box">
+
+<div class="card">
+<!-- <img src="images/nexflow.png"> --> 
+<h3>NexFlow - Automatic Traffic Signal Control System</h3>
+<br>
+<p>A traffic management system that analyzes real-time traffic conditions and automatically adjusts signal timings to improve traffic flow.</p>
+<a href="https://github.com/la6ks6hm6ii6/nexFlow-atcs" class="projects-btn" target="_blank">GitHub</a>
+</div>
+
+<div class="card">
+<h3>A-Z BOOKWORLD</h3>
+<br>
+<p>Developed a library management system to simplify book issuing, returns, and record management through an easy-to-use interface.</p>
+<!--  <a href="">GitHub</a> --->
+</div>
+
+<div class="card">
+<h3>Naturopedia</h3>
+<br>
+<p>A simple parallax scrolling website built using HTML and CSS to create a smooth and engaging user experience.</p>
+<a href="https://github.com/la6ks6hm6ii6/Naturopedia" class="projects-btn" target="_blank">GitHub</a>
+</div>
+</div>
+</section>
+
+
+<section id="Certifications">
+    <h2>Certifications</h2>
+    <div class="project-box1">
+    <div class="card1">
+        <h3>Introduction to Software Engineering</h3>
+        <p>Issued by IBM with Coursera</p>
+        <br>
+        <a href="Coursera DM6W8X12QR4N.pdf" class="certificate-btn" target="_blank">
+            View Certificate
+        </a>
+    </div>
+    <div class="card1">
+        <h3>Full Stack Web Development</h3>
+        <p> Issued by Pace Lab</p>
+        <br>
+        <a href="PaceLab (1).pdf" class="certificate-btn" target="_blank">
+            View Certificate
+        </a>
+    </div>
+    <div class="card1">
+        <h3>Front End Development</h3>
+        <p>Issued by Great Learning Academy</p>
+        <br>
+        <a href="Great Learning (1).pdf" class="certificate-btn" target="_blank">
+            View Certificate
+        </a>
+    </div>
+    </div>
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+<div class="contact">
+<a href="https://mail.google.com/mail/?view=cm&fs=1&to=sreelakshmi62002@gmail.com" target="_blank">
+    <i class="fa-solid fa-envelope"></i></a>
+<a href="tel:+919061812776">
+    <i class="fa-solid fa-phone"></i></a>
+<a href="https://github.com/la6ks6hm6ii6"><i class="fa-brands fa-github"></i></a>
+<a href="https://linkedin.com/in/m-s-sreelakshmi-5a6107253"><i class="fa-brands fa-linkedin"></i></a>
+</div>
+</div>
+</section>
+<button id="topBtn">
+<i class="fa-solid fa-arrow-up"></i>
+</button>
+<footer>
+    © 2026 M S Sreelakshmi
+</footer>
+</body>
+
+<script>
+const words = [
+    "Front-End Developer",
+    "React Learner",
+    "Problem Solver"
+];
+let wordIndex = 0;
+let charIndex = 0;
+let deleting = false;
+function type(){
+    const text = document.getElementById("typing");
+    if(!deleting){
+        text.innerHTML = words[wordIndex].substring(0,charIndex++);
+    }else{
+        text.innerHTML = words[wordIndex].substring(0,charIndex--);
+    }
+    if(charIndex===words[wordIndex].length+1){
+        deleting=true;
+        setTimeout(type,1000);
+        return;
+    }
+    if(charIndex===0 && deleting){
+        deleting=false;
+        wordIndex=(wordIndex+1)%words.length;
+    }
+    setTimeout(type,deleting?60:120);
+}
+type();
+
+const topBtn=document.getElementById("topBtn");
+window.addEventListener("scroll",()=>{topBtn.style.display=window.scrollY>300?"block":"none";
+});
+topBtn.onclick=()=>{
+    window.scrollTo({top:0,behavior:"smooth"
+});
+}
+</script>
+</html>
