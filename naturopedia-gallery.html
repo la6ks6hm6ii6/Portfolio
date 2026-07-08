@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/S.png">
+    <title>Naturopedia</title>
+<style>
+    *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Poppins,sans-serif;
+}
+body{
+    background:linear-gradient(135deg,#000000,#111827,#1f2937);
+    color:white;
+    padding:40px;
+}
+h1{
+    text-align:center;
+    margin-bottom:40px;
+}
+.naturopedia{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(400px,1fr));
+    gap:25px; 
+    justify-items:center;
+}
+.naturopedia img{
+    width:100%;
+    max-width: 500px;
+    border-radius:12px;
+    border:2px solid #6C63FF;
+    transition:.3s;
+    cursor:pointer;
+    height: auto;
+    
+}
+.naturopedia img:hover{
+    transform:scale(1.03);
+    box-shadow:0 0 25px rgba(108,99,255,.5);
+}
+</style>
+</head>
+<body>
+    <h1>Naturopedia Gallery</h1>
+    <div class="naturopedia">
+    <img src="naturopedia/nature1.png" alt="">
+    <img src="naturopedia/nature2.png" alt="">
+    <img src="naturopedia/nature3.png" alt="">
+    <img src="naturopedia/nature5.png" alt="">
+    <img src="naturopedia/nature4.png" alt="">
+    </div>
+</body>
+</html>

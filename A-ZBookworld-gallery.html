@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/S.png">
+    <title>A-Z Bookworld Gallery</title>
+<style>
+    *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Poppins,sans-serif;
+}
+body{
+    background:linear-gradient(135deg,#000000,#111827,#1f2937);
+    color:white;
+    padding:40px;
+}
+h1{
+    text-align:center;
+    margin-bottom:40px;
+}
+.A-Z_gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(400px,1fr));
+    gap:25px; 
+    justify-items:center;
+}
+.A-Z_gallery img{
+    width:100%;
+    max-width: 500px;
+    border-radius:12px;
+    border:2px solid #6C63FF;
+    transition:.3s;
+    cursor:pointer;
+    height: auto;
+    
+}
+.A-Z_gallery img:hover{
+    transform:scale(1.03);
+    box-shadow:0 0 25px rgba(108,99,255,.5);
+}
+</style>
+</head>
+<body>
+    <h1>A-Z Bookworld Gallery</h1>
+    <div class="A-Z_gallery">
+    <img src="A-Z_gallery/1.png" alt="home">
+    <img src="A-Z_gallery/2.png" alt="User Login Form">
+    <img src="A-Z_gallery/3.png" alt="User Registration">
+    <img src="A-Z_gallery/4.png" alt="Admin Dashboard">
+    <img src="A-Z_gallery/5.png" alt="Add book">
+    <img src="A-Z_gallery/6.png" alt="Manage Books">
+    <img src="A-Z_gallery/8.png" alt="User Feedbacks">
+    <img src="A-Z_gallery/9.png" alt="Reserved Books">
+    <img src="A-Z_gallery/10.png" alt="Manage Issued Books">
+    <img src="A-Z_gallery/7.png" alt="Manage Issued Books">
+    </div>
+</body>
+</html>
