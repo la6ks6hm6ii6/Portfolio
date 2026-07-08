@@ -25,6 +25,7 @@ a,button{
 .hero h2{
     font-size:42px;
     line-height:1.2;
+    white-space: nowrap;
 }
 .hero .container{
     min-height:85vh;
@@ -52,6 +53,17 @@ section{
     width:100%;
     max-width:360px;
 }
+nav{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+    width:100%;
+    text-align:center;
+}
+nav a{
+    margin:0;
+    padding:8px 0;
+}
 }
 @media (min-width: 577px) and (max-width: 991px) {
     .hero{
@@ -63,6 +75,17 @@ section{
 }
 .hero h2{
     font-size:40px;
+}
+nav{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+    width:100%;
+    text-align:center;
+}
+nav a{
+    margin:0;
+    padding:8px 0;
 }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -557,13 +580,25 @@ text-align:center;
 font-size:40px;
 }
 .hero h2{
-font-size:52px;
+font-size:26px;
+white-space: nowrap;
 }
 .hero p{
 font-size:22px;
 }
 .contact{
 justify-content:center;
+}
+nav{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+    width:100%;
+    text-align:center;
+}
+nav a{
+    margin:0;
+    padding:8px 0;
 }
 }
 @media(max-width:480px){
@@ -579,5 +614,16 @@ max-width:220px;
 .card,
 .card1{
 width:100%;
+}
+nav{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+    width:100%;
+    text-align:center;
+}
+nav a{
+    margin:0;
+    padding:8px 0;
 }
 }
