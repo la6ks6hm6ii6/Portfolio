@@ -16,6 +16,7 @@ body{
     background:linear-gradient(135deg,#000000,#111827,#1f2937);
     color:white;
     padding:40px;
+    overflow-x:hidden;
 }
 h1{
     text-align:center;
@@ -23,23 +24,38 @@ h1{
 }
 .nexflow_gallery{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(400px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap:25px; 
     justify-items:center;
 }
 .nexflow_gallery img{
     width:100%;
-    max-width: 500px;
-    border-radius:12px;
+    max-width:500px;
+    height:300px;
+    object-fit:contain;
+    background:#111827;
     border:2px solid #6C63FF;
+    border-radius:12px;
+    padding:10px;
     transition:.3s;
     cursor:pointer;
-    height: auto;
     
 }
 .nexflow_gallery img:hover{
     transform:scale(1.03);
     box-shadow:0 0 25px rgba(108,99,255,.5);
+}
+@media (max-width:768px){
+    body{
+        padding:20px;
+    }
+    .A-Z_gallery{
+        grid-template-columns:1fr;
+    }
+    .A-Z_gallery img{
+        max-width:100%;
+        height:auto;
+    }
 }
 </style>
 </head>

@@ -22,6 +22,10 @@ a,button{
     flex-direction:column;
     gap:15px;
 }
+.hero h2{
+    font-size:clamp(1.8rem, 7vw, 2.3rem);
+    line-height:1.2;
+}
 .hero .container{
     min-height:85vh;
 }
@@ -35,6 +39,18 @@ section{
 }
 .hero img{
     max-width:220px;
+}
+.education-card{
+    width:100%;
+    max-width:360px;
+}
+.card{
+    width:100%;
+   max-width:360px;
+}
+.card1{
+    width:100%;
+    max-width:360px;
 }
 }
 @media (min-width: 577px) and (max-width: 991px) {
@@ -511,7 +527,7 @@ footer{
     margin-top: 30px;
 }
 .contact a{
-    font-size:35px;
+    font-size: 30px;
     padding:18px;
     background:#0d131c;
     border-radius:10%;
