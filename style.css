@@ -23,7 +23,7 @@ a,button{
     gap:15px;
 }
 .hero h2{
-    font-size:clamp(1.8rem, 7vw, 2.3rem);
+    font-size:42px;
     line-height:1.2;
 }
 .hero .container{
@@ -62,7 +62,7 @@ section{
     max-width:280px;
 }
 .hero h2{
-    font-size:clamp(2rem,5vw,3.5rem);
+    font-size:40px;
 }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
