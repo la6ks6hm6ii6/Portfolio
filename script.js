@@ -1,4 +1,5 @@
 const words = [
+    "Computer Science Graduate",
     "Front-End Developer",
     "Quick Learner",
     "Problem Solver"
